@@ -11,3 +11,7 @@ unsigned int Color24bpp(byte r, byte g, byte b) {
   return Color(r>>3, g>>3, b>>3);
 }
 
+
+//Gamma 2.5
+//for i in range(256):
+//        gamma[i] = int(pow(float(i) / 255.0, 2.5) * 255.0 + 0.5)

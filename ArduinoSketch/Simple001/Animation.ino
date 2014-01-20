@@ -1,3 +1,12 @@
+void solid() {
+  delay(5);
+  k++;
+  for (unsigned int i=0; i < strip.numPixels(); i++) {
+    strip.setPixelColor(i, Color24bpp(k%255, (k/2)%255, i*3));
+  }
+  strip.show();      
+}
+
 
 void rainbow() {
   delay(1);
