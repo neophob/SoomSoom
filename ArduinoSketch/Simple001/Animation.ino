@@ -1,8 +1,12 @@
 void solid() {
-  delay(5);
+  delay(200);
   k++;
-  for (unsigned int i=0; i < strip.numPixels(); i++) {
-    strip.setPixelColor(i, Color24bpp(k%255, (k/2)%255, i*3));
+  int r = random(strip.numPixels()-2);
+  for (unsigned int i=0; i < r; i++) {
+    strip.setPixelColor(i, Color24bpp(0,255,0));
+  }
+  for (unsigned int i=r; i < strip.numPixels(); i++) {
+    strip.setPixelColor(i, Color24bpp(255,0,0));
   }
   strip.show();      
 }

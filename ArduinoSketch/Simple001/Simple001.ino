@@ -46,9 +46,8 @@ void setup() {
   //strip.begin(SPI_CLOCK_DIV4);        // Start up the LED counterm 4.0MHz - 0.25uS
   //strip.begin(SPI_CLOCK_DIV2);        // Start up the LED counterm 8.0MHz - 0.125uS
 
-//  strip.setCPU(36);                    // call the isr routine each 36us to drive the pwm
-  strip.setCPU(32);                    // call the isr routine each 36us to drive the pwm
-  strip.begin(SPI_CLOCK_DIV16);        // Start up the LED counterm 0.5MHz - 2uS
+  strip.setCPU(36);                    // call the isr routine each 36us to drive the pwm
+  strip.begin(SPI_CLOCK_DIV8);        // Start up the LED counterm 0.5MHz - 2uS
 
   rainbow();      // display some colors
   
@@ -64,8 +63,8 @@ void setup() {
 //      main loop
 // --------------------------------------------
 void loop() {
-  rainbow();
-  //solid();
+  //rainbow();
+  solid();
 }
 
 
